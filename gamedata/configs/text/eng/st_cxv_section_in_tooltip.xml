@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+
+	<string id="cxv_sction_tooltip_dot">
+		<text>•</text>
+	</string>
+	<string id="cxv_sction_tooltip_section_title">
+		<text>Section Name:</text>
+	</string>
+	
+	
+</string_table>

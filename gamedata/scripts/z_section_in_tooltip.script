@@ -1,0 +1,19 @@
+local gt = game.translate_string
+
+build_footer_base = ui_item.build_desc_footer
+function ui_item.build_desc_footer(obj, sec, str)
+	str = str or gt(ini_sys:r_string_ex(sec, "description"))
+	if (not str) then return "" end
+	
+	local p_clr = utils_xml.get_color("d_purple")
+	local w_clr = utils_xml.get_color("pda_white")
+	local def_clr = utils_xml.get_color("ui_gray_1")
+	
+	local sec_str = "\\n " .. p_clr .. gt("cxv_sction_tooltip_dot") .. " " .. def_clr .. gt("cxv_sction_tooltip_section_title") .. " " .. w_clr .. sec .. "\\n \\n" .. def_clr
+	
+	if sec_str then
+		return build_footer_base(obj, sec, str) .. sec_str
+	end
+
+	return build_footer_base(obj, sec, str)
+end
